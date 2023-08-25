@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in 1s ease;
+}
+
+.content {
+    text-align: center;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+}
+
+/* Performance Optimization */
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    will-change: transform; /* Optimize for animations */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Advanced Techniques */
+.container {
+    background: linear-gradient(to bottom right, var(--primary-color), white);
+}
+
+.content {
+    mix-blend-mode: difference;
+}
